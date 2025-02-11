@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наша история в цифрах ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffe0f0, #ffb3d9);
+      color: #d63384;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease-in;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding: 10px;
+      white-space: nowrap;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .section {
+      min-width: 90%;
+      font-size: 18px;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      scroll-snap-align: center;
+      opacity: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-weight: bold;
+      line-height: 1.8;
+      color: #d63384;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      max-width: 80%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    table, th, td {
+      border: 1px solid #d63384;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ffb3d9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animated {
+      animation: fadeIn 1.5s ease-in forwards;
+    }
+  </style>
+</head>
+<body>
+  <h1>Наша история в цифрах ❤️</h1>
+  <div class="gallery">
+    <!-- Авторы -->
+    <div class="section" id="authors">
+      📌 Активность авторов:<br>
+      Любочка (81,066), pr!xt (82,915)
+    </div>
+
+    <!-- Романтические слова -->
+    <div class="section" id="romantic_words">
+      💖 Романтические слова:
+      <table>
+        <tr><th>Слово</th><th>Кол-во</th></tr>
+        <tr><td>солнышко</td><td>530</td></tr>
+        <tr><td>люблю</td><td>2,194</td></tr>
+        <tr><td>любимый</td><td>132</td></tr>
+        <tr><td>милая</td><td>458</td></tr>
+        <tr><td>любимая</td><td>91</td></tr>
+        <tr><td>милый</td><td>363</td></tr>
+        <tr><td>солнце</td><td>272</td></tr>
+        <tr><td>обнимаю</td><td>230</td></tr>
+        <tr><td>целую</td><td>178</td></tr>
+        <tr><td>черт..)</td><td>139</td></tr>
+      </table>
+    </div>
+
+    <!-- Средняя длина сообщений -->
+    <div class="section" id="avg_length">
+      ✉️ Средняя длина сообщения:<br>
+      34.6 символов
+    </div>
+
+    <!-- Среднее количество сообщений в день -->
+    <div class="section" id="avg_messages">
+      📩 Среднее сообщений в день:<br>
+      193.8
+    </div>
+
+    <!-- Самый активный день -->
+    <div class="section" id="active_day">
+      📅 Самый активный день:<br>
+      11 декабря 2022
+    </div>
+
+    <!-- Топ слова -->
+    <div class="section" id="top_words">
+      🔝 Топ слова:
+      <table>
+        <tr><th>Слово</th><th>Кол-во</th></tr>
+        <tr><td>тебя</td><td>8,284</td></tr>
+        <tr><td>сейчас</td><td>7,306</td></tr>
+        <tr><td>меня</td><td>6,144</td></tr>
+        <tr><td>просто</td><td>5,388</td></tr>
+        <tr><td>только</td><td>5,027</td></tr>
+        <tr><td>хочу</td><td>4,777</td></tr>
+        <tr><td>очень</td><td>4,673</td></tr>
+        <tr><td>если</td><td>3,840</td></tr>
+        <tr><td>тоже</td><td>3,261</td></tr>
+        <tr><td>хорошо</td><td>3,075</td></tr>
+      </table>
+    </div>
+
+    <!-- Активность по времени суток -->
+    <div class="section" id="time_of_day_activity">
+      ⏰ Активность по времени суток:
+      <table>
+        <tr><th>Время</th><th>Сообщений</th></tr>
+        <tr><td>00-04</td><td>2,674</td></tr>
+        <tr><td>04-08</td><td>8,773</td></tr>
+        <tr><td>08-12</td><td>16,365</td></tr>
+        <tr><td>12-16</td><td>15,866</td></tr>
+        <tr><td>16-20</td><td>37,219</td></tr>
+        <tr><td>20-24</td><td>83,084</td></tr>
+      </table>
+    </div>
+
+    <!-- Ежемесячная активность -->
+    <div class="section" id="monthly_activity">
+      📊 Ежемесячная активность:
+      <table>
+        <tr><th>Месяц</th><th>Сообщений</th></tr>
+        <tr><td>Январь</td><td>19,643</td></tr>
+        <tr><td>Февраль</td><td>13,396</td></tr>
+        <tr><td>Март</td><td>13,439</td></tr>
+        <tr><td>Апрель</td><td>13,401</td></tr>
+        <tr><td>Май</td><td>11,978</td></tr>
+        <tr><td>Июнь</td><td>9,834</td></tr>
+        <tr><td>Июль</td><td>11,114</td></tr>
+        <tr><td>Август</td><td>11,856</td></tr>
+        <tr><td>Сентябрь</td><td>10,805</td></tr>
+        <tr><td>Октябрь</td><td>13,766</td></tr>
+        <tr><td>Ноябрь</td><td>12,249</td></tr>
+        <tr><td>Декабрь</td><td>22,500</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll(".section");
+      sections.forEach((section, index) => {
+        setTimeout(() => {
+          section.classList.add("animated");
+        }, (index + 1) * 1000);
+      });
+    });
+  </script>
+</body>
+</html>
