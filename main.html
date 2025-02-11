@@ -10,19 +10,19 @@
       color: #d63384;
       font-family: 'Arial', sans-serif;
       text-align: center;
-      padding: 20px;
+      padding-top: 0px;
       animation: fadeIn 2s ease-in;
-      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      overflow-y:inherit;
     }
 
     h1 {
       font-size: 24px;
       font-weight: bold;
-      margin-bottom: 20px;
+      margin-bottom: 0px;
       opacity: 0;
       animation: fadeIn 1.5s ease-in forwards;
     }
@@ -41,7 +41,8 @@
     .section {
       min-width: 90%;
       font-size: 18px;
-      padding: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
       background: white;
       border-radius: 15px;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -88,20 +89,36 @@
     .animated {
       animation: fadeIn 1.5s ease-in forwards;
     }
+    .blur {
+      filter: blur(5px);
+      transition: filter 0.5s ease;
+      cursor: pointer;
+    }
+    .clear {
+      filter: none;
+    } 
+    .cat {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 10;
+    }
   </style>
 </head>
 <body>
-  <h1>Наша история в цифрах ❤️</h1>
+  <h1>Это наша история в цифрах ❤️</h1>
   <div class="gallery">
     <!-- Авторы -->
     <div class="section" id="authors">
-      📌 Активность авторов:<br>
+      📌 Наша активность:📌<br>
       Любочка (81,066), pr!xt (82,915)
     </div>
 
     <!-- Романтические слова -->
     <div class="section" id="romantic_words">
-      💖 Романтические слова:
+      💖 Любимые слова:💖
       <table>
         <tr><th>Слово</th><th>Кол-во</th></tr>
         <tr><td>солнышко</td><td>530</td></tr>
@@ -113,31 +130,31 @@
         <tr><td>солнце</td><td>272</td></tr>
         <tr><td>обнимаю</td><td>230</td></tr>
         <tr><td>целую</td><td>178</td></tr>
-        <tr><td>черт..)</td><td>139</td></tr>
+        <tr><td id="blurtext" class="blur">черт..)<br><i>во всех формах!</i></td><td>969</td></tr>
       </table>
     </div>
 
     <!-- Средняя длина сообщений -->
     <div class="section" id="avg_length">
-      ✉️ Средняя длина сообщения:<br>
+      ✉️ Средняя длина✉️<br> сообщения:<br>
       34.6 символов
     </div>
 
     <!-- Среднее количество сообщений в день -->
     <div class="section" id="avg_messages">
-      📩 Среднее сообщений в день:<br>
+      📩 Среднее количество📩<br> сообщений в день:<br>
       193.8
     </div>
 
     <!-- Самый активный день -->
     <div class="section" id="active_day">
-      📅 Самый активный день:<br>
-      11 декабря 2022
+      📅 Наш cамый активный день:📅<br>
+      11 декабря 2022 - 690!!
     </div>
 
     <!-- Топ слова -->
     <div class="section" id="top_words">
-      🔝 Топ слова:
+      🔝 Топ слова:🔝
       <table>
         <tr><th>Слово</th><th>Кол-во</th></tr>
         <tr><td>тебя</td><td>8,284</td></tr>
@@ -155,7 +172,7 @@
 
     <!-- Активность по времени суток -->
     <div class="section" id="time_of_day_activity">
-      ⏰ Активность по времени суток:
+      ⏰ Активность по⏰<br> времени суток:
       <table>
         <tr><th>Время</th><th>Сообщений</th></tr>
         <tr><td>00-04</td><td>2,674</td></tr>
@@ -169,7 +186,7 @@
 
     <!-- Ежемесячная активность -->
     <div class="section" id="monthly_activity">
-      📊 Ежемесячная активность:
+      📊 Ежемесячная активность:📊
       <table>
         <tr><th>Месяц</th><th>Сообщений</th></tr>
         <tr><td>Январь</td><td>19,643</td></tr>
@@ -187,6 +204,9 @@
       </table>
     </div>
   </div>
+  <img src="https://i.pinimg.com/736x/1d/aa/f2/1daaf27d0f599c008ecdeb358f271de0.jpg" alt="Cat" class="cat" style="top: 10px; left: 10px;">
+  <img src="https://i.pinimg.com/736x/7c/c7/4b/7cc74b001ba6eece7787bf60406d7d55.jpg" alt="Cat" class="cat" style="top: 100px; right: 20px;">
+  <img src="https://i.pinimg.com/736x/90/ef/8a/90ef8a9e99c01a8f962bf3cdfae3b0f0.jpg" alt="Cat" class="cat" style="bottom: 20px; left: 50px;">
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -196,6 +216,11 @@
           section.classList.add("animated");
         }, (index + 1) * 1000);
       });
+    });
+    const textElement = document.getElementById("blurtext");
+
+    textElement.addEventListener("click", function() {
+    textElement.classList.toggle("clear");
     });
   </script>
 </body>
