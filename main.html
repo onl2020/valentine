@@ -105,6 +105,14 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       z-index: 10;
     }
+    .sticker{
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 20px;
+      rotate: 20deg;
+      z-index: 10;
+    }
   </style>
 </head>
 <body>
@@ -112,8 +120,10 @@
   <div class="gallery">
     <!-- Авторы -->
     <div class="section" id="authors">
+      <img src="sticker1.webp" alt="sticker" class="sticker" style="top: 60px; right: 30px; rotate: -15deg;">
       📌 Наша активность:📌<br>
-      Любочка (81,066), pr!xt (82,915)
+      Любочка - 81,066, pr!xt - 82,915<br>сообщений
+      <video src="sticker.webm" width="150px" height="150px" class="sticker" style="bottom: 60px;"autoplay loop muted> </video>
     </div>
 
     <!-- Романтические слова -->
@@ -130,24 +140,33 @@
         <tr><td>солнце</td><td>272</td></tr>
         <tr><td>обнимаю</td><td>230</td></tr>
         <tr><td>целую</td><td>178</td></tr>
-        <tr><td id="blurtext" class="blur">черт..)<br><i>во всех формах!</i></td><td>969</td></tr>
+        <tr><td id="blurtext" class="blur">черт..)<br><i>во всех формах!</i></td><td>969
+          <img src="sticker5.webp" alt="sticker" class="sticker" style=" z-index: 1;bottom: 60px; right: 120px; rotate: 0deg; width: 45px; height: 45px;">
+        </td></tr>
       </table>
     </div>
 
     <!-- Средняя длина сообщений -->
     <div class="section" id="avg_length">
+      <img src="sticker.webp" alt="sticker" class="sticker" style="top: 60px; left: 30px;">
+     
       ✉️ Средняя длина✉️<br> сообщения:<br>
       34.6 символов
+      <video src="sticker1.webm" width="150px" height="150px" class="sticker" style="bottom: 90px; rotate: -5deg;"autoplay loop muted> </video>
     </div>
 
     <!-- Среднее количество сообщений в день -->
     <div class="section" id="avg_messages">
+      <img src="sticker3.webp" alt="sticker" class="sticker" style="bottom: 1px; left: 80px; rotate: 0deg;">
+      <video src="sticker2.webm" width="150px" height="150px" class="sticker" style="top: 90px; rotate: -5deg;"autoplay loop muted> </video>
       📩 Среднее количество📩<br> сообщений в день:<br>
       193.8
     </div>
 
     <!-- Самый активный день -->
     <div class="section" id="active_day">
+      <img src="sticker2.webp" alt="sticker" class="sticker" style="bottom: 60px; right: 80px; rotate: 15deg;">
+      <img src="sticker4.webp" alt="sticker" class="sticker" style="top: 60px; left: 80px; rotate: 10deg;">
       📅 Наш cамый активный день:📅<br>
       11 декабря 2022 - 690 сообщений!!
     </div>
@@ -203,10 +222,13 @@
         <tr><td>Декабрь</td><td>22,500</td></tr>
       </table>
     </div>
+    <div class="section" id="monthly_activity">
+      Я люблю тебя, милая!
+    </div>
   </div>
-  <img src="https://i.pinimg.com/736x/1d/aa/f2/1daaf27d0f599c008ecdeb358f271de0.jpg" alt="Cat" class="cat" style="top: 10px; left: 10px;">
+  <img src="https://i.pinimg.com/736x/1d/aa/f2/1daaf27d0f599c008ecdeb358f271de0.jpg" alt="Cat" class="cat" style="top: 60px; left: 5px;">
   <img src="https://i.pinimg.com/736x/7c/c7/4b/7cc74b001ba6eece7787bf60406d7d55.jpg" alt="Cat" class="cat" style="top: 100px; right: 20px;">
-  <img src="https://i.pinimg.com/736x/90/ef/8a/90ef8a9e99c01a8f962bf3cdfae3b0f0.jpg" alt="Cat" class="cat" style="bottom: 20px; left: 50px;">
+  <img src="https://i.pinimg.com/736x/90/ef/8a/90ef8a9e99c01a8f962bf3cdfae3b0f0.jpg" alt="Cat" class="cat" style="bottom: 20px; left: 10px;">
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
